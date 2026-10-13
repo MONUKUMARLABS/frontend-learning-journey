@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Job Application Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 550px;
+            margin: 40px auto;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        #error {
+            color: red;
+        }
+
+        #success {
+            color: green;
+        }
+
+        #applicationDetails {
+            white-space: pre-line;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Job Application Form</h1>
+
+    <form id="jobForm" novalidate>
+
+        <label for="fullName">Full Name</label>
+        <input id="fullName" type="text">
+
+        <label for="email">Email</label>
+        <input id="email" type="email">
+
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel">
+
+        <label for="age">Age</label>
+        <input id="age" type="number">
+
+        <label for="skills">Skills</label>
+        <input
+            id="skills"
+            type="text"
+            placeholder="Example: C#, SQL, JavaScript">
+
+        <label for="experience">Experience (in years)</label>
+        <input id="experience" type="number">
+
+        <label for="portfolio">Resume / Portfolio URL</label>
+        <input
+            id="portfolio"
+            type="url"
+            placeholder="https://example.com">
+
+        <br><br>
+
+        <button type="submit">Submit Application</button>
+    </form>
+
+    <p id="error"></p>
+    <p id="success"></p>
+
+    <div id="applicationDetails"></div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
