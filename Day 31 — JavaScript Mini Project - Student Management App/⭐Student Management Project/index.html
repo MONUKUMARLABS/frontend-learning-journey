@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        form {
+            display: grid;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .student-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+
+        #error {
+            color: red;
+        }
+
+        #success {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Student Management</h1>
+
+    <form id="studentForm" novalidate>
+
+        <input
+            id="name"
+            type="text"
+            placeholder="Student Name">
+
+        <input
+            id="email"
+            type="email"
+            placeholder="Email">
+
+        <input
+            id="marks"
+            type="number"
+            placeholder="Marks (0 to 100)">
+
+        <button type="submit">
+            Add Student
+        </button>
+
+    </form>
+
+    <p id="error"></p>
+    <p id="success"></p>
+
+    <h2>Students</h2>
+
+    <div id="studentsContainer"></div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
