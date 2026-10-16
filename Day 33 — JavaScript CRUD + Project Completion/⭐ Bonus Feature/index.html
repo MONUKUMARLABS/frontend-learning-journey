@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management CRUD</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        form {
+            display: grid;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        input,
+        button {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .student-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+
+        .actions,
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .filter-button.active {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        .delete-button {
+            background-color: #dc2626;
+            color: white;
+            border: none;
+        }
+
+        .statistics {
+            background-color: #f3f4f6;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        #error {
+            color: red;
+        }
+
+        #success {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Student Management</h1>
+
+    <form id="studentForm" novalidate>
+
+        <input id="name" type="text"
+            placeholder="Student Name">
+
+        <input id="email" type="email"
+            placeholder="Email">
+
+        <input id="marks" type="number"
+            placeholder="Marks (0 to 100)">
+
+        <button id="submitButton" type="submit">
+            Add Student
+        </button>
+
+    </form>
+
+    <p id="error"></p>
+    <p id="success"></p>
+
+    <input id="search" type="text"
+        placeholder="Search student by name">
+
+    <div class="filters">
+        <button
+            class="filter-button active"
+            data-filter="all"
+            type="button">
+            All
+        </button>
+
+        <button
+            class="filter-button"
+            data-filter="passed"
+            type="button">
+            Passed
+        </button>
+
+        <button
+            class="filter-button"
+            data-filter="failed"
+            type="button">
+            Failed
+        </button>
+    </div>
+
+    <div class="statistics">
+        <h2>Statistics</h2>
+
+        <p>Total Students: <span id="studentCount">0</span></p>
+        <p>Passed: <span id="passedCount">0</span></p>
+        <p>Failed: <span id="failedCount">0</span></p>
+        <p>Average Marks: <span id="averageMarks">0</span></p>
+    </div>
+
+    <h2>Students</h2>
+
+    <div id="studentsContainer"></div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

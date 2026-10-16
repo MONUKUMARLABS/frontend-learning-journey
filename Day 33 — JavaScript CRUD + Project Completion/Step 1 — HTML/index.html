@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management CRUD</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        form {
+            display: grid;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        input,
+        button {
+            padding: 10px;
+        }
+
+        .student-card {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .success {
+            color: green;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Student Management</h1>
+
+    <form id="studentForm">
+
+        <input
+            id="name"
+            type="text"
+            placeholder="Student Name">
+
+        <input
+            id="email"
+            type="email"
+            placeholder="Email">
+
+        <input
+            id="marks"
+            type="number"
+            placeholder="Marks">
+
+        <button
+            id="submitButton"
+            type="submit">
+            Add Student
+        </button>
+
+    </form>
+
+    <p id="error"></p>
+
+    <p id="success"></p>
+
+    <h2>
+        Total Students:
+        <span id="studentCount">0</span>
+    </h2>
+
+    <div id="studentsContainer"></div>
+
+
+</body>
+
+</html>

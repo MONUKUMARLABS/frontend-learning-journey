@@ -1,0 +1,3 @@
+loadStudents();
+
+renderStudents();
