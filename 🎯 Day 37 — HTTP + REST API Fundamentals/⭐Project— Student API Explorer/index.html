@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Student API Explorer</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 750px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        button,
+        input {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .api-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        #search {
+            width: 100%;
+            box-sizing: border-box;
+            margin: 15px 0;
+        }
+
+        .student-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+
+        #apiStatus {
+            color: #166534;
+        }
+
+        #error {
+            color: #b91c1c;
+        }
+
+        #apiResponse {
+            background: #f3f4f6;
+            padding: 12px;
+            border-radius: 8px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Student API Explorer</h1>
+
+    <div class="api-buttons">
+        <button id="getButton" type="button">
+            GET: Load Students
+        </button>
+
+        <button id="postButton" type="button">
+            POST
+        </button>
+
+        <button id="putButton" type="button">
+            PUT
+        </button>
+
+        <button id="deleteButton" type="button">
+            DELETE
+        </button>
+    </div>
+
+    <input
+        id="search"
+        type="text"
+        placeholder="Search by name or email">
+
+    <p id="apiStatus"></p>
+    <p id="error"></p>
+
+    <div id="usersContainer"></div>
+
+    <h3>API Response</h3>
+    <pre id="apiResponse"></pre>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
